@@ -1,0 +1,99 @@
+.add_member_to_project {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 13.86px;
+  line-height: 21px;
+  letter-spacing: 0;
+  font-style: normal;
+  text-align: center;
+  vertical-align: middle;
+  color: #6c757d;
+}
+.add_task_to_project {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 13.86px;
+  line-height: 21px;
+  letter-spacing: 0;
+  font-style: normal;
+  text-align: center;
+  vertical-align: middle;
+  color: #6c757d;
+}
+.detail button {
+  cursor: pointer;
+  cursor: pointer;
+  transition: transform 150ms linear;
+}
+.detail button:hover {
+  filter: brightness(0.9);
+  transform: scale(1.01);
+}
+.itemMember {
+}
+.itemMember h4 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 13.65px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  font-style: normal;
+}
+.itemMember p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 11.94px;
+  line-height: 21px;
+  letter-spacing: 0px;
+  font-style: normal;
+  color: #6c757d;
+}
+.add_search_detail > button,
+.add_search_detail div > * {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15.81px;
+  line-height: 24px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+}
+.title_detail {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 19.04px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #212529;
+}
+.table_detail {
+}
+.table_detail th,
+.table_detail td {
+  border: 1px solid #dfe0e1;
+}
+.table_detail th {
+  background-color: #f8f9fa;
+  color: #000000;
+  height: 41px;
+}
+.table_detail td {
+  color: #212529;
+  height: 48px;
+  text-align: center;
+  padding: 12px;
+}
+.table_detail td:first-child {
+  text-align: start;
+}
+.table_detail tbody .name_status_detail {
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 15.47px;
+  line-height: 20px;
+  letter-spacing: 0;
+}

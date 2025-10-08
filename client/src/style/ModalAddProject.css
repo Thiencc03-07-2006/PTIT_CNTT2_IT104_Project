@@ -1,0 +1,108 @@
+.modal_add {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000080;
+  display: flex;
+  justify-content: center;
+  padding-top: 33px;
+  z-index: 9999;
+}
+.modal_add .box_input {
+  box-shadow: 0px 8px 8px -4px #10182808, 0px 20px 24px -4px #10182814;
+}
+.modal_add_title {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 23.3px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  font-style: normal;
+  vertical-align: middle;
+}
+.modal_add_close {
+  cursor: pointer;
+  transition: transform 150ms linear;
+}
+.modal_add_close:hover {
+  filter: brightness(0.9);
+  transform: scale(1.05);
+}
+.modal_add .form_input {
+  padding: 15px 24px;
+  border: 1px solid #dee2e6;
+}
+.modal_add input,
+.modal_add textarea,
+.modal_add select {
+  width: 100%;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  height: 44px;
+  padding-left: 12px;
+  color: #101828;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-style: normal;
+  margin-top: 6px;
+}
+.modal_add textarea {
+  height: 80px;
+  padding: 10px 12px;
+}
+.modal_add [type="file"] {
+  color: #4f4f4f;
+  cursor: pointer;
+}
+.modal_add [type="file"]::file-selector-button {
+  border-right: 1px solid #ccc;
+  padding-right: 12px;
+  margin-right: 12px;
+  height: 44px;
+  cursor: pointer;
+}
+.modal_add label {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  font-style: normal;
+  color: #344054;
+}
+.modal_add .error {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-style: normal;
+  vertical-align: middle;
+  color: #dc3545;
+}
+.modal_add button:not(.modal_add_close) {
+  width: 58px;
+  height: 37px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-style: normal;
+  cursor: pointer;
+  transition: transform 150ms linear;
+}
+.modal_add button:not(.modal_add_close):hover {
+  filter: brightness(0.9);
+  transform: scale(1.01);
+}

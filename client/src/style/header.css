@@ -1,0 +1,17 @@
+.title_header {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 19.74px;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+.nav_item {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15.78px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
