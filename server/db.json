@@ -10,14 +10,345 @@
       "id": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
       "fullName": "Nguyen Van A",
       "email": "a@gmail.com",
-      "password": "An123Van"
+      "password": "12345678"
     },
     {
       "id": "6dee50e6-d4e1-41a8-84ff-0c9a089be4fe",
       "fullName": "Toa Bi",
       "email": "a@c.c",
       "password": "123123123"
+    },
+    {
+      "id": "522f7c0c-8e82-4275-a16a-330a26073bb3",
+      "fullName": "tester 4",
+      "email": "admin@gmail.com.com",
+      "password": "12345678"
     }
   ],
-  "project": []
+  "projects": [
+    {
+      "id": "a1b2",
+      "projectName": "Project Alpha",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "This is project Alpha"
+    },
+    {
+      "id": "p1a0",
+      "projectName": "Project 1",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 1"
+    },
+    {
+      "id": "p2b1",
+      "projectName": "Project 2",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 2"
+    },
+    {
+      "id": "p3c2",
+      "projectName": "Project 3",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 3"
+    },
+    {
+      "id": "p4d3",
+      "projectName": "Project 4",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 4"
+    },
+    {
+      "id": "p5e4",
+      "projectName": "Project 5",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 5"
+    },
+    {
+      "id": "p6f5",
+      "projectName": "Project 6",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 6"
+    },
+    {
+      "id": "p7g6",
+      "projectName": "Project 7",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 7"
+    },
+    {
+      "id": "p8h7",
+      "projectName": "Project 8",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 8"
+    },
+    {
+      "id": "p9i8",
+      "projectName": "Project 9",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 9"
+    },
+    {
+      "id": "p10j9",
+      "projectName": "Project 10",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 10"
+    },
+    {
+      "id": "p11k0",
+      "projectName": "Project 11",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 11"
+    },
+    {
+      "id": "p12l1",
+      "projectName": "Project 12",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 12"
+    },
+    {
+      "id": "p13m2",
+      "projectName": "Project 13",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 13"
+    },
+    {
+      "id": "p14n3",
+      "projectName": "Project 14",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 14"
+    },
+    {
+      "id": "p15o4",
+      "projectName": "Project 15",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 15"
+    },
+    {
+      "id": "p16p5",
+      "projectName": "Project 16",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 16"
+    },
+    {
+      "id": "p17q6",
+      "projectName": "Project 17",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 17"
+    },
+    {
+      "id": "p18r7",
+      "projectName": "Project 18",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 18"
+    },
+    {
+      "id": "p19s8",
+      "projectName": "Project 19",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 19"
+    },
+    {
+      "id": "p20t9",
+      "projectName": "Project 20",
+      "image": "",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        }
+      ],
+      "description": "Description for Project 20"
+    },
+    {
+      "id": "Fzca",
+      "projectName": "test2",
+      "image": "https://res.cloudinary.com/dk4uhrl7t/image/upload/v1760044629/qomvifb5sazxfemoqdkq.png",
+      "members": [
+        {
+          "userId": "5a7c65c5-1e5f-4fcc-9c5d-00d1c6453a4c",
+          "role": "Project owner"
+        },
+        {
+          "userId": "6dee50e6-d4e1-41a8-84ff-0c9a089be4fe",
+          "role": "leader"
+        },
+        {
+          "userId": "e883dbf3-ea52-4d0d-b2c1-3131be3e85a8",
+          "role": "test"
+        },
+        {
+          "userId": "522f7c0c-8e82-4275-a16a-330a26073bb3",
+          "role": "test"
+        }
+      ],
+      "description": "1"
+    },
+    {
+      "id": "icDp",
+      "projectName": "test1234567",
+      "image": "https://res.cloudinary.com/dk4uhrl7t/image/upload/v1759979557/t1ja9jd8f5dji3tu2vcd.png",
+      "members": [
+        {
+          "userId": "6dee50e6-d4e1-41a8-84ff-0c9a089be4fe",
+          "role": "Project owner"
+        }
+      ],
+      "description": "test2"
+    },
+    {
+      "id": "WGsL",
+      "projectName": "test125",
+      "image": "https://res.cloudinary.com/dk4uhrl7t/image/upload/v1759980084/bco1aalria6s9bfyvt0w.png",
+      "members": [
+        {
+          "userId": "6dee50e6-d4e1-41a8-84ff-0c9a089be4fe",
+          "role": "Project owner"
+        }
+      ],
+      "description": "123"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "60c30be2-8264-4dc1-af7a-c7c64ef6ff79",
+      "taskName": "test1",
+      "assigneeId": "522f7c0c-8e82-4275-a16a-330a26073bb3",
+      "projectId": "Fzca",
+      "asignDate": "2025-10-14",
+      "dueDate": "2025-10-14",
+      "priority": "Cao",
+      "progress": "Có rủi ro",
+      "status": "To do"
+    },
+    {
+      "id": "ba94bfc4-1deb-49dc-9636-4461743e28b0",
+      "taskName": "test4",
+      "assigneeId": "e883dbf3-ea52-4d0d-b2c1-3131be3e85a8",
+      "projectId": "Fzca",
+      "asignDate": "2025-10-15",
+      "dueDate": "2025-10-15",
+      "priority": "Trung bình",
+      "progress": "Có rủi ro",
+      "status": "In progress"
+    }
+  ]
 }

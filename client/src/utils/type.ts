@@ -13,9 +13,9 @@ export type Task = {
   projectId: string;
   asignDate: string; // Định dạng "YYYY-MM-DD"
   dueDate: string; // Định dạng "YYYY-MM-DD"
-  priority: "Thấp" | "Trung bình" | "Cao"; // Nếu có thêm mức khác thì thêm vào
-  progress: string; // Có thể dùng enum nếu có danh sách tiến độ cố định
-  status: "To do" | "In progress" | "Done"; // Tùy theo các trạng thái
+  priority: "Thấp" | "Trung bình" | "Cao" | ""; // Nếu có thêm mức khác thì thêm vào
+  progress: "Đúng tiến độ" | "Có rủi ro" | "Trễ hạn" | ""; // Có thể dùng enum nếu có danh sách tiến độ cố định
+  status: "To do" | "In progress" | "Done" | "Pending" | ""; // Tùy theo các trạng thái
 };
 
 // Type cho thành viên trong project
@@ -30,4 +30,5 @@ export type Project = {
   projectName: string;
   image: string;
   members: ProjectMember[];
+  description: string;
 };

@@ -8,6 +8,7 @@ import { useAppDispatch } from "../hooks/useAppDispatch";
 import { addUser, fetchUserData } from "../apis/userApi";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { setNowUser } from "../redux/features/userSlice";
 interface RegisterForm extends User {
   confirmPassword: string;
 }
@@ -71,6 +72,7 @@ export default function Registerpage() {
         password: inputAcc.password,
       };
       dispatch(addUser(temp));
+      dispatch(setNowUser(temp.id));
       localStorage.setItem("nowAcc", JSON.stringify(temp.id));
       toast.success("Đăng ký thành công");
       setInputAcc({

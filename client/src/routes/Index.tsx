@@ -18,7 +18,7 @@ export default function Index() {
       ),
       children: [
         { index: true, element: <Management /> },
-        { path: "/detail", element: <Detail /> },
+        { path: "/detail/:id", element: <Detail /> },
       ],
     },
   ]);

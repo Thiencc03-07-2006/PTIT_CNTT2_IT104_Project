@@ -1,16 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { Project } from "../../utils/type";
-import { addProject, fetchProjectData } from "../../apis/projectApi";
+import {
+  addMember,
+  addProject,
+  deleteProject,
+  fetchProjectData,
+  updateProject,
+} from "../../apis/projectApi";
+import { toast } from "react-toastify";
 interface Projects {
   status: "idle" | "pending" | "fulfilled" | "rejected";
   projects: Project[];
-  nowProject: Project | null;
   error: unknown;
 }
 const initialState: Projects = {
   status: "idle",
   projects: [],
-  nowProject: JSON.parse(localStorage.getItem("nowAcc") || "null"),
   error: null,
 };
 const ProjectSlice = createSlice({
@@ -38,6 +43,53 @@ const ProjectSlice = createSlice({
         state.projects.push(action.payload);
       })
       .addCase(addProject.rejected, (state, action) => {
+        state.status = "rejected";
+        state.error = action.payload;
+      })
+      .addCase(deleteProject.pending, (state) => {
+        state.status = "pending";
+      })
+      .addCase(deleteProject.fulfilled, (state, action) => {
+        state.status = "fulfilled";
+        state.projects = state.projects.filter((t) => t.id !== action.payload);
+      })
+      .addCase(deleteProject.rejected, (state, action) => {
+        state.status = "rejected";
+        state.error = action.payload;
+      })
+      .addCase(updateProject.pending, (state) => {
+        state.status = "pending";
+      })
+      .addCase(updateProject.fulfilled, (state, action) => {
+        state.status = "fulfilled";
+        const index = state.projects.findIndex(
+          (t) => t.id === action.payload.id
+        );
+        if (index !== -1) {
+          state.projects[index] = action.payload;
+        } else {
+          toast.warning("Cập nhật thất bại");
+        }
+      })
+      .addCase(updateProject.rejected, (state, action) => {
+        state.status = "rejected";
+        state.error = action.payload;
+      })
+      .addCase(addMember.pending, (state) => {
+        state.status = "pending";
+      })
+      .addCase(addMember.fulfilled, (state, action) => {
+        state.status = "fulfilled";
+        const index = state.projects.findIndex(
+          (t) => t.id === action.payload.id
+        );
+        if (index !== -1) {
+          state.projects[index].members.push(action.payload.member);
+        } else {
+          toast.warning("Cập nhật thất bại");
+        }
+      })
+      .addCase(addMember.rejected, (state, action) => {
         state.status = "rejected";
         state.error = action.payload;
       });

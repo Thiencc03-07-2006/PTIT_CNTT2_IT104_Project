@@ -1,9 +1,14 @@
 import type React from "react";
 import "../style/ModalAddProject.css";
+import { useAppDispatch } from "../hooks/useAppDispatch";
+import { deleteProject } from "../apis/projectApi";
+import { toast } from "react-toastify";
 interface props {
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  open: string | boolean;
+  setOpen: React.Dispatch<React.SetStateAction<string | boolean>>;
 }
-export default function ModalDeleteProject({ setOpen }: props) {
+export default function ModalDeleteProject({ open, setOpen }: props) {
+  const dispatch = useAppDispatch();
   return (
     <div className="modal_add">
       <form className="box_input w-[480px] bg-white max-h-max rounded-[7px]">
@@ -30,7 +35,16 @@ export default function ModalDeleteProject({ setOpen }: props) {
           >
             Hủy
           </button>
-          <button className="bg-[#DC3545]">Xoá</button>
+          <button
+            onClick={() => {
+              dispatch(deleteProject(String(open)));
+              toast.success("Xóa thành công");
+              setOpen(false);
+            }}
+            className="bg-[#DC3545]"
+          >
+            Xoá
+          </button>
         </div>
       </form>
     </div>

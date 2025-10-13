@@ -7,6 +7,7 @@ import type { RootState } from "../redux/store/store";
 import { useAppDispatch } from "../hooks/useAppDispatch";
 import { fetchUserData } from "../apis/userApi";
 import { toast } from "react-toastify";
+import { setNowUser } from "../redux/features/userSlice";
 export default function Loginpage() {
   const navigate = useNavigate();
   const [validate, setValidate] = useState<string[]>([]);
@@ -44,6 +45,7 @@ export default function Loginpage() {
       );
       if (temp) {
         if (temp.password === inputAcc.password) {
+          dispatch(setNowUser(temp.id));
           localStorage.setItem("nowAcc", JSON.stringify(temp.id));
           toast.success("Đăng nhập thành công");
           setInputAcc({

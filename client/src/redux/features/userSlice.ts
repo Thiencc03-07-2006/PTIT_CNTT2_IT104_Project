@@ -16,7 +16,16 @@ const initialState: Users = {
 const userSlice = createSlice({
   name: "user",
   initialState,
-  reducers: {},
+  reducers: {
+    setNowUser: (state, action) => {
+      state.nowUser = action.payload;
+      localStorage.setItem("nowAcc", JSON.stringify(action.payload));
+    },
+    logout: (state) => {
+      state.nowUser = null;
+      localStorage.removeItem("nowAcc");
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchUserData.pending, (state) => {
@@ -43,4 +52,5 @@ const userSlice = createSlice({
       });
   },
 });
+export const { setNowUser } = userSlice.actions;
 export default userSlice.reducer;

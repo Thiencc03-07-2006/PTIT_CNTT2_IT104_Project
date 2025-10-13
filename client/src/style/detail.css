@@ -22,7 +22,6 @@
 }
 .detail button {
   cursor: pointer;
-  cursor: pointer;
   transition: transform 150ms linear;
 }
 .detail button:hover {

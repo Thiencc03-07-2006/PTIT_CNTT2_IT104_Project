@@ -122,6 +122,7 @@
   align-items: center;
   justify-content: center;
   color: #0d6efd;
+  background: #ffffff;
 }
 .pages div:first-child {
   color: #212529;
@@ -138,4 +139,12 @@
 .pages div.cannot {
   background-color: #e9ecef;
   color: #dee2e6;
+}
+.pages div:not(.cannot) {
+  cursor: pointer;
+  transition: transform 150ms linear;
+}
+.pages div:not(.cannot):hover {
+  filter: brightness(0.9);
+  transform: scale(1.01);
 }

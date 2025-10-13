@@ -66,6 +66,8 @@
   height: 44px;
   cursor: pointer;
 }
+.modal_add [type="file"].error_file {
+}
 .modal_add label {
   font-family: "Inter", sans-serif;
   font-weight: 500;
