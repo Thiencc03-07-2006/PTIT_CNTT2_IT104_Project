@@ -1,6 +1,7 @@
 import "../style/header.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 export default function Header() {
+  const location = useLocation();
   const isProjectActive =
     location.pathname === "/" || location.pathname.startsWith("/detail");
   return (
@@ -18,7 +19,7 @@ export default function Header() {
           Dự Án
         </NavLink>
         <NavLink
-          to="/my-mission"
+          to="/my-task"
           className={({ isActive }) =>
             `nav_item ${isActive ? "text-[#ffffff]" : "text-[#ffffff8c]"}`
           }

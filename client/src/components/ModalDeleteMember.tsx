@@ -1,13 +1,16 @@
 import type React from "react";
 import "../style/ModalAddProject.css";
 import { useAppDispatch } from "../hooks/useAppDispatch";
-import { deleteTask } from "../apis/taskApi";
 import { toast } from "react-toastify";
+import { deleteTask } from "../apis/taskApi";
+import type { Project } from "../utils/type";
+import type { deleteMember } from "../apis/projectApi";
 interface props {
   open: string | boolean;
   setOpen: React.Dispatch<React.SetStateAction<string | boolean>>;
+  project: Project;
 }
-export default function ModalDeleteTask({ open, setOpen }: props) {
+export default function ModalDeleteMember({ open, setOpen, project }: props) {
   const dispatch = useAppDispatch();
   return (
     <div className="modal_add">
@@ -24,7 +27,7 @@ export default function ModalDeleteTask({ open, setOpen }: props) {
         </div>
         <div className="form_input">
           <p style={{ margin: "-4px 0 20px -1px" }}>
-            Bạn chắc chắn muốn xoá nhiệm vụ này này?
+            Bạn chắc chắn muốn xoá thành viên này?
           </p>
         </div>
         <div className="flex justify-end gap-[23px] pt-[18px] pr-[22px] pb-[21px]">
@@ -37,7 +40,9 @@ export default function ModalDeleteTask({ open, setOpen }: props) {
           </button>
           <button
             onClick={() => {
-              dispatch(deleteTask(String(open)));
+              dispatch(
+                deleteMember({ id: project.id, memberId: String(open) })
+              );
               toast.success("Xóa thành công");
               setOpen(false);
             }}

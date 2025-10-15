@@ -15,6 +15,7 @@ import { toast } from "react-toastify";
 import ModalAddMember from "../components/ModalAddMember";
 import { fetchProjectData } from "../apis/projectApi";
 import ModalMemberList from "../components/ModalMemberList";
+import ModalDeleteMember from "../components/ModalDeleteMember";
 export default function Detail() {
   const { id } = useParams<{ id: string }>();
   const [project, setProject] = useState<Project | null>(null);
@@ -55,6 +56,9 @@ export default function Detail() {
   const [openDelete, setOpenDelete] = useState<string | boolean>(false);
   const [openAddMember, setOpenAddMember] = useState(false);
   const [openMemberList, setOpenMemberList] = useState(false);
+  const [openDeleteMember, setOpenDeleteMember] = useState<string | boolean>(
+    false
+  );
   const handleOpen = (type: "todo" | "inProgress" | "pending" | "done") => {
     setToggleDown({ ...toggleDown, [type]: !toggleDown[type] });
   };
@@ -632,6 +636,13 @@ export default function Detail() {
           project={project}
           users={users}
           setProject={setProject}
+          setOpenDelete={setOpenDeleteMember}
+        />
+      )}
+      {project && openMemberList && openDeleteMember && (
+        <ModalDeleteMember
+          open={openDeleteMember}
+          setOpen={setOpenDeleteMember}
         />
       )}
     </div>

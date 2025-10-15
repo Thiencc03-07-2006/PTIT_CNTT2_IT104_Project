@@ -1,34 +1,21 @@
 import type React from "react";
 import "../style/ModalAddProject.css";
-import { useState } from "react";
 import type { Project } from "../utils/type";
 import type { User } from "../utils/type";
-import { useAppDispatch } from "../hooks/useAppDispatch";
-import { addMember } from "../apis/projectApi";
 import { Trash2 } from "lucide-react";
 interface props {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   project: Project;
   setProject: React.Dispatch<React.SetStateAction<Project | null>>;
   users: User[];
+  setOpenDelete: React.Dispatch<React.SetStateAction<string | boolean>>;
 }
 export default function ModalMemberList({
   setOpen,
   project,
-  setProject,
   users,
+  setOpenDelete,
 }: props) {
-  const [inputAcc, setInputAcc] = useState<{ email: string; role: string }>({
-    email: "",
-    role: "",
-  });
-  const [validate, setValidate] = useState<string[]>([]);
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setInputAcc({ ...inputAcc, [e.target.name]: e.target.value });
-  };
-  const dispatch = useAppDispatch();
   return (
     <div className="modal_add">
       <form className="box_input w-[598px] bg-white max-h-max rounded-[7px]">
@@ -90,7 +77,10 @@ export default function ModalMemberList({
                           defaultValue={t.role}
                           disabled={t.role === "Project owner"}
                         />
-                        <div className="text-[#DC3545]">
+                        <div
+                          // onClick={() => setOpenDelete(t.userId)}
+                          className="text-[#DC3545]"
+                        >
                           <Trash2 />
                         </div>
                       </div>

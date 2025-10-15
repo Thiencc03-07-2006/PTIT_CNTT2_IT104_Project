@@ -3,6 +3,7 @@ import type { Project } from "../../utils/type";
 import {
   addMember,
   addProject,
+  deleteMember,
   deleteProject,
   fetchProjectData,
   updateProject,
@@ -89,7 +90,23 @@ const ProjectSlice = createSlice({
           toast.warning("Cập nhật thất bại");
         }
       })
-      .addCase(addMember.rejected, (state, action) => {
+      .addCase(deleteMember.pending, (state) => {
+        state.status = "pending";
+      })
+      .addCase(deleteMember.fulfilled, (state, action) => {
+        state.status = "fulfilled";
+        const index = state.projects.findIndex(
+          (t) => t.id === action.payload.id
+        );
+        if (index !== -1) {
+          state.projects[index].members = state.projects[index].members.filter(
+            (t) => t.userId !== action.payload.memberId
+          );
+        } else {
+          toast.warning("Cập nhật thất bại");
+        }
+      })
+      .addCase(deleteMember.rejected, (state, action) => {
         state.status = "rejected";
         state.error = action.payload;
       });

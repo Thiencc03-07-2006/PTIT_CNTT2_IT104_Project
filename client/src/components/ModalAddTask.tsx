@@ -6,6 +6,7 @@ import type { Task } from "../utils/type";
 import type { Project } from "../utils/type";
 import { useAppDispatch } from "../hooks/useAppDispatch";
 import { addTask, updateTask } from "../apis/taskApi";
+import { toast } from "react-toastify";
 interface props {
   setOpen: React.Dispatch<React.SetStateAction<string | boolean>>;
   typeEdit: string | boolean;
@@ -102,8 +103,10 @@ export default function ModalAddTask({
             projectId: project.id,
           })
         );
+        toast.success(`Thêm thành công`);
       } else {
         dispatch(updateTask({ ...inputTask }));
+        toast.success(`Sửa thành công`);
       }
       setOpen(false);
     } else {

@@ -100,8 +100,10 @@ export default function ModalAddProject({
               members: [{ userId: String(nowUser), role: "Project owner" }],
             })
           );
+          toast.success(`Thêm thành công`);
         } else {
           dispatch(updateProject({ ...inputProject, image: img }));
+          toast.success(`Sửa thành công`);
         }
         setOpen(false);
       } catch (error) {

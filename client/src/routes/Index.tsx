@@ -5,6 +5,7 @@ import Layout from "../layouts/Layout";
 import Management from "../pages/Management";
 import Detail from "../pages/Detailpage";
 import ProtectedRoute from "../components/ProtectedRoute";
+import MyTask from "../pages/MyTaskpage";
 export default function Index() {
   const router = createBrowserRouter([
     { path: "/login", element: <Loginpage /> },
@@ -19,6 +20,7 @@ export default function Index() {
       children: [
         { index: true, element: <Management /> },
         { path: "/detail/:id", element: <Detail /> },
+        { path: "/my-task", element: <MyTask /> },
       ],
     },
   ]);

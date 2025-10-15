@@ -5,6 +5,7 @@ import type { Project } from "../utils/type";
 import type { User } from "../utils/type";
 import { useAppDispatch } from "../hooks/useAppDispatch";
 import { addMember } from "../apis/projectApi";
+import { toast } from "react-toastify";
 interface props {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   project: Project;
@@ -35,11 +36,15 @@ export default function ModalAddMember({
     if (!inputAcc.email || inputAcc.email.trim().length === 0) {
       mess.push("emptyEmail");
     } else {
-      if (index === -1) {
-        mess.push("missEmail");
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputAcc.email)) {
+        mess.push("incorrectEmail");
       } else {
-        if (project.members.some((t) => t.userId === users[index].id)) {
-          mess.push("existsEmail");
+        if (index === -1) {
+          mess.push("missEmail");
+        } else {
+          if (project.members.some((t) => t.userId === users[index].id)) {
+            mess.push("existsEmail");
+          }
         }
       }
     }
@@ -57,6 +62,7 @@ export default function ModalAddMember({
           member: { userId: users[index].id, role: inputAcc.role },
         })
       );
+      toast.success(`Thêm thành công`);
       setOpen(false);
       setProject((prev) =>
         prev
@@ -101,13 +107,17 @@ export default function ModalAddMember({
                 borderColor:
                   validate.includes("emptyEmail") ||
                   validate.includes("existsEmail") ||
-                  validate.includes("longEmail")
+                  validate.includes("missEmail") ||
+                  validate.includes("incorrectEmail")
                     ? "#DC3545"
                     : "#bdbdbd",
               }}
             />
             {validate.includes("emptyEmail") && (
               <p className="error">Email không được để trống</p>
+            )}
+            {validate.includes("incorrectEmail") && (
+              <p className="error">Email không đúng định dạng</p>
             )}
             {validate.includes("existsEmail") && (
               <p className="error">Email đã tồn tại</p>

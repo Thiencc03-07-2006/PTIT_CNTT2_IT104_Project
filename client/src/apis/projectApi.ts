@@ -63,3 +63,20 @@ export const addMember = createAsyncThunk(
     }
   }
 );
+export const deleteMember = createAsyncThunk(
+  "projects/deleteMember",
+  async (data: { id: string; memberId: string }) => {
+    try {
+      const res = await axios.get(`http://localhost:8080/projects/${data.id}`);
+      const project = res.data;
+      const members = project.members;
+      members.filter((t) => t.userId !== data.memberId);
+      await axios.patch(`http://localhost:8080/projects/${data.id}`, {
+        members,
+      });
+      return data;
+    } catch (error) {
+      return error;
+    }
+  }
+);
